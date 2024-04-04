@@ -361,32 +361,32 @@ def cornersHeuristic(state, problem):
     it should be admissible (as well as consistent).
     """
     corners = problem.corners # These are the corner coordinates
-    walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
 
-    # por cada permutacion de las esquinas sin visitar
-    # suma de distancias manhatan
+    # Sea N la cantidad de esquinas sin visitar, pasamos por todas las permutaciones de N,
+    # y calculamos para cada permutacion, el costo de visitarlas en ese orden.
+    # (en distancia manhattan)
 
-    sinvis = [ corners[i] for i in range(0,4) if not state[1][i] ]
+    esquinasSinVisitar = [ corners[i] for i in range(0,4) if not state[1][i] ]
 
-    if len (sinvis) == 0:
+    if len (esquinasSinVisitar) == 0:
         return 0
 
     from itertools import permutations 
     
     # Get all permutations of [1, 2, 3] 
     
-    perm = permutations( [i for i in range(0, len (sinvis))] ) 
+    perm = permutations( [i for i in range(0, len (esquinasSinVisitar))] ) 
     
     from util import manhattanDistance
 
     rta = 999999
     for p in list(perm):
         pos = state[0]
-        aux = 0
-        for esq in p:
-            aux += manhattanDistance( pos, sinvis[ esq ] )
-            pos = sinvis[ esq ]
-        rta = min( rta, aux )
+        sumacosto = 0
+        for indice_esquina in p:
+            sumacosto += manhattanDistance( pos, esquinasSinVisitar[ indice_esquina ] )
+            pos = esquinasSinVisitar[ indice_esquina ]
+        rta = min( rta, sumacosto )
     
     return rta 
 
@@ -440,10 +440,6 @@ class FoodSearchProblem:
             if not self.walls[nextx][nexty]:
                 nextFood = state[1].copy()
                 nextFood[nextx][nexty] = False
-                """if nextFood[nextx][nexty]:
-                    indice = state[1]+1
-                else:
-                    indice = state[1]"""
                 successors.append( ( ((nextx, nexty), nextFood), direction, 1) )
         return successors
 
@@ -471,8 +467,7 @@ class AStarFoodSearchAgent(SearchAgent):
 
 def getClosestPoint(punto, vectorpunto):
     from util import manhattanDistance 
-    puntoRta = vectorpunto[0]
-    rta = manhattanDistance( punto, vectorpunto[0])
+    rta = 999999999
     for p2 in vectorpunto:
         d = manhattanDistance( punto, p2)
         if rta > d:
@@ -507,18 +502,18 @@ def foodHeuristic(state, problem):
     Subsequent calls to this heuristic can access problem.heuristicInfo['wallCount']
     """
     position, foodGrid = state
-    "*** YOUR CODE HERE ***"
 
-    # return manhattanDistance(position, getClosestPoint(position, food))
+    # Calculamos un camino que pase por todos los nodos con comidas,
+    # donde en cada paso nos movemos al nodo mas cercano
 
     rta = 0
     from util import manhattanDistance
-    food = foodGrid.asList()
+    food = set(foodGrid.asList())
     numeroComidas = len(food)
     for i in range(0, numeroComidas):
         nextx, nexty = getClosestPoint(position , food )
         rta += manhattanDistance(position, (nextx, nexty))
-        food = [food[i]  for i in range(0, len(food)) if food[i] != (nextx, nexty)] #
+        food.remove( (nextx, nexty) )
         position = (nextx, nexty)
         
     return rta

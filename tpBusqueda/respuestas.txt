@@ -1,0 +1,20 @@
+Ejercicio 1)
+No encuentra el camino optimo para el mediumMaze por el algoritmo de busqueda
+que se eligió.
+Pacman no tiene que ir por todas las casillas exploradas si 
+luego de explorarlas descubrio que no conducen a la meta
+
+Ejercicio 4)
+Probamos todos los algoritmos de busqueda y resulta que A* dio el resultado optimo
+expandiendo el menor numero de nodos.
+
+Ejercicio 5)
+Explicar la admisibilidad de la heurística desarrollada:
+
+Para ver que la heuristica es admisible tenemos que observar que la distancia
+manhattan es siempre menor o igual a la distancia real entre dos puntos
+cualesquiera del laberinto. Además, un recorrido optimo que visite todas las
+esquinas pasaría por cada una en una secuencia que no repita esquinas; por lo
+tanto en una secuencia que es permutacion de las esquinas. Si calculamos para
+cada permutacion el coste de recorrer las esquinas en dicho orden, habremos
+encontrado el óptimo.
