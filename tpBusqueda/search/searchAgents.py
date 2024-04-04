@@ -405,15 +405,26 @@ class FoodSearchProblem:
       pacmanPosition: a tuple (x,y) of integers specifying Pacman's position
       foodGrid:       a Grid (see game.py) of either True or False, specifying remaining food
     """
+        
+
     def __init__(self, startingGameState):
         self.start = (startingGameState.getPacmanPosition(), startingGameState.getFood())
         self.walls = startingGameState.getWalls()
         self.startingGameState = startingGameState
+        self.grid = startingGameState.getFood()
         self._expanded = 0
         self.heuristicInfo = {} # A dictionary for the heuristic to store information
+        """pos = startingGameState.getPacmanPosition()
+        food = startingGameState.getFood().asList()
+        while True:
+            nextx, nexty = getClosestPoint(pos , food )
+            self.heuristicInfo.append((nextx, nexty))
+            
+            pos = nextFood"""
+
 
     def getStartState(self):
-        return self.start
+        return self.start # la segunda componente es el indice de comida a la que vamos
 
     def isGoalState(self, state):
         return state[1].count() == 0
@@ -429,6 +440,10 @@ class FoodSearchProblem:
             if not self.walls[nextx][nexty]:
                 nextFood = state[1].copy()
                 nextFood[nextx][nexty] = False
+                """if nextFood[nextx][nexty]:
+                    indice = state[1]+1
+                else:
+                    indice = state[1]"""
                 successors.append( ( ((nextx, nexty), nextFood), direction, 1) )
         return successors
 
@@ -453,6 +468,18 @@ class AStarFoodSearchAgent(SearchAgent):
     def __init__(self):
         self.searchFunction = lambda prob: search.aStarSearch(prob, foodHeuristic)
         self.searchType = FoodSearchProblem
+
+def getClosestPoint(punto, vectorpunto):
+    from util import manhattanDistance 
+    puntoRta = vectorpunto[0]
+    rta = manhattanDistance( punto, vectorpunto[0])
+    for p2 in vectorpunto:
+        d = manhattanDistance( punto, p2)
+        if rta > d:
+            puntoRta = p2
+            rta = d   
+    return puntoRta
+    
 
 def foodHeuristic(state, problem):
     """
@@ -482,11 +509,19 @@ def foodHeuristic(state, problem):
     position, foodGrid = state
     "*** YOUR CODE HERE ***"
 
-    rta = 99999999
-    from util import manhattanDistance 
-    for food in foodGrid.asList():
-        rta = min( rta, manhattanDistance(position, food) )
-    return rta + len(foodGrid )
+    # return manhattanDistance(position, getClosestPoint(position, food))
+
+    rta = 0
+    from util import manhattanDistance
+    food = foodGrid.asList()
+    numeroComidas = len(food)
+    for i in range(0, numeroComidas):
+        nextx, nexty = getClosestPoint(position , food )
+        rta += manhattanDistance(position, (nextx, nexty))
+        food = [food[i]  for i in range(0, len(food)) if food[i] != (nextx, nexty)] #
+        position = (nextx, nexty)
+        
+    return rta
  
 
 class ClosestDotSearchAgent(SearchAgent):
