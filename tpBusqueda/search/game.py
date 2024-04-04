@@ -184,6 +184,9 @@ class Grid:
                 base *= 2
         return hash(h)
 
+    def __lt__(self, other):
+        return len(self.asList()) <= len(other.asList())
+
     def copy(self):
         g = Grid(self.width, self.height)
         g.data = [x[:] for x in self.data]
