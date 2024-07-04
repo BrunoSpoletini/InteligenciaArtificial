@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#destacaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#destacaEn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#esMarcaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#esMarcaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMarca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#esParteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#esParteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneParte"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#masDemandante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#masDemandante">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#menosDemandante"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#menosDemandante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#menosDemandante">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneCubierta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneCubierta">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneParte"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Cubiertas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMarca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMarca">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Marca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMotor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMotor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneParte"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Motor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneParte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneParte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Año -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Año">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Velocidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Velocidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Cubiertas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Cubiertas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Marca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Marca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoCafeRacer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoCafeRacer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#destacaEn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoRuta"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneCubierta"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMotor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoDeportiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoDeportiva">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneCubierta"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasLisas"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMotor"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorGrande"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#destacaEn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoPista"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoElectrica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoElectrica">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#destacaEn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoUrbano"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneCubierta"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMotor"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorElectricoGenerico"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoMotocross -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoMotocross">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#destacaEn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoOffRoad"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneCubierta"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasTodoTerreno"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMotor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoScooter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotoScooter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#destacaEn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoUrbano"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneCubierta"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#tieneMotor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Motor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Motor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Motor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorElectrico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorElectrico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Motor"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Bullet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Bullet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <untitled-ontology-3:destacaEn rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoRuta"/>
+        <untitled-ontology-3:tieneCubierta rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar"/>
+        <untitled-ontology-3:tieneMarca rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#RoyalEnfield"/>
+        <untitled-ontology-3:tieneMotor rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorMediano"/>
+        <untitled-ontology-3:Año rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1932</untitled-ontology-3:Año>
+        <untitled-ontology-3:Velocidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130</untitled-ontology-3:Velocidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Cubiertas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasLisas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasLisas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Cubiertas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasTodoTerreno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasTodoTerreno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Cubiertas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoOffRoad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoOffRoad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+        <untitled-ontology-3:masDemandante rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoRuta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoPista -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoPista">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoRuta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoRuta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+        <untitled-ontology-3:masDemandante rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoPista"/>
+        <untitled-ontology-3:masDemandante rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoUrbano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoUrbano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoUrbano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Entorno"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Honda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Honda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Marca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorChico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorChico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorElectricoGenerico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorElectricoGenerico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorElectrico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorGrande -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorGrande">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorMediano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorMediano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorACombustion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#NMax -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#NMax">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <untitled-ontology-3:destacaEn rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoUrbano"/>
+        <untitled-ontology-3:tieneCubierta rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar"/>
+        <untitled-ontology-3:tieneMarca rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Yamaha"/>
+        <untitled-ontology-3:tieneMotor rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorChico"/>
+        <untitled-ontology-3:Año rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</untitled-ontology-3:Año>
+        <untitled-ontology-3:Velocidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">118</untitled-ontology-3:Velocidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#R7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#R7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <untitled-ontology-3:destacaEn rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoPista"/>
+        <untitled-ontology-3:tieneCubierta rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasLisas"/>
+        <untitled-ontology-3:tieneMarca rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Yamaha"/>
+        <untitled-ontology-3:tieneMotor rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorGrande"/>
+        <untitled-ontology-3:Año rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1999</untitled-ontology-3:Año>
+        <untitled-ontology-3:Velocidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">230</untitled-ontology-3:Velocidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#RoyalEnfield -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#RoyalEnfield">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Marca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#TS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#TS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <untitled-ontology-3:destacaEn rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoUrbano"/>
+        <untitled-ontology-3:tieneCubierta rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasEstandar"/>
+        <untitled-ontology-3:tieneMarca rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Verge"/>
+        <untitled-ontology-3:tieneMotor rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorElectricoGenerico"/>
+        <untitled-ontology-3:Año rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</untitled-ontology-3:Año>
+        <untitled-ontology-3:Velocidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</untitled-ontology-3:Velocidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Tornado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Tornado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Moto"/>
+        <untitled-ontology-3:destacaEn rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#EntornoOffRoad"/>
+        <untitled-ontology-3:tieneCubierta rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#CubiertasTodoTerreno"/>
+        <untitled-ontology-3:tieneMarca rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Honda"/>
+        <untitled-ontology-3:tieneMotor rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#MotorMediano"/>
+        <untitled-ontology-3:Año rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</untitled-ontology-3:Año>
+        <untitled-ontology-3:Velocidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">122</untitled-ontology-3:Velocidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Verge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Verge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Marca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Yamaha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Yamaha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaston/ontologies/2024/3/untitled-ontology-3#Marca"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
